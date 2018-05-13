@@ -38,6 +38,10 @@ nav{
 .topnav .icon {
   display: none;
 }
+.topnav .icon:hover {
+  color:white;
+  background-color: transparent;
+}
 
 @media screen and (max-width: 1050px) {
   .topnav a:not(:first-child) {display: none;}
