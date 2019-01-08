@@ -46,7 +46,7 @@ nav{
   background-color: transparent;
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 560px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
@@ -54,7 +54,7 @@ nav{
   }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 560px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -67,3 +67,29 @@ nav{
     text-align: left;
   }
 }
+
+/*Projects Page*/
+.youtube iframe{
+    border: thin solid black;
+    border-radius: 8px;
+}
+/*Mobile*/
+@media screen and (max-width: 560px){
+    .youtube iframe{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;     
+    }
+    .youtube{
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        /*! overflow: hidden; */
+    }
+    h2{
+        font-size:smaller;
+    }
+}
+
