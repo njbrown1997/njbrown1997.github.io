@@ -68,6 +68,12 @@ nav{
     }
 }
 
+.gameEntry, .projEntry{
+    padding-bottom: 10px;
+    border-bottom-style: dotted;
+    border-width: medium;
+}
+
 /*Projects Page*/
 .youtube iframe{
     border: thin solid black;
@@ -76,6 +82,14 @@ nav{
 
 /*Mobile*/
 @media screen and (max-width: 560px){
+    p{
+        font-size:12px;
+    }
+    .gameEntry, .projEntry{
+        padding-bottom: 2%;
+    }
+
+
     .youtube iframe{
         position: absolute;
         top:0;
