@@ -1,7 +1,6 @@
 /*------------------------------*/
 /*RESPONSIVE NAVIGATION MENU*/
 /*------------------------------*/
-
 body {
     font-family: PT Sans, arial, sans-serif;
     background-color: #b6c7dc;
@@ -82,6 +81,17 @@ nav{
     border-width: medium;
 }
 
+.youtube iframe, .pdf iframe{
+    position: absolute;
+    width:100%;
+    height: 100%; 
+}
+.youtube, .pdf{
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
 /*Projects Page*/
 .youtube iframe{
     border: thin solid black;
@@ -95,18 +105,6 @@ nav{
     }
     .gameEntry, .projEntry{
         padding-bottom: 2%;
-    }
-
-
-    iframe{
-        position: absolute;
-        width:100%;
-        height: 100%;    
-    }
-    .youtube{
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
     }
     h2{
         font-size: large;
