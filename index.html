@@ -11,7 +11,7 @@
               type ="text/css"
               media ="screen">
     </head>
-    <body class="pdfView" onload="resize()">
+    <body>
         <!-- ######################     Main Navigation   ########################## -->
         <script>
             function myFunction() {
@@ -31,29 +31,25 @@
             <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
         </nav>
         <!-- ######################     End Main Navigation   ########################## -->
-        
-        <!-- ######################     Size PDF Viewer   ########################## -->
 
-        <iframe id="frame" src="https://drive.google.com/file/d/1g8SKROpc-bpnJnrLXk-tfp7xTWR0KP3T/preview" frameborder="0" allow="autoplay"></iframe>
-
-        <script>
-            function resize() {
-                var x = document.getElementById("myTopNav");
-                var y = document.getElementById("pdfTitle");
-                var frame = document.getElementById("frame");
-                const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
-                for (var lx=0, ly=0;
-                    frame != null;
-                    lx += frame.offsetLeft, ly += frame.offsetTop, frame = frame.offsetParent);
-
-                var frame = document.getElementById("frame");
-                frame.height = vh - x.offsetHeight;
-            }
-            window.onresize = resize;
-        </script>
-
-        <!-- ######################     End Size PDF Viewer  ########################## -->
-
+        <table class="zui-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Link</th>
+                    <th>Difficulty</th>
+                    <th>Keywords</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A Familiar Function</td>
+                    <td><a href="pdf.html"  target="_blank">View</a></td>
+                    <td>1/5</td>
+                    <td>Number Theory</td>
+                </tr>
+            </tbody>
+        </table>
     </body>
 </html>
 
