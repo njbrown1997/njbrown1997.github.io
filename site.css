@@ -138,6 +138,7 @@ body .pdfView {
     border-spacing: 0;
     /*! font: normal 13px Arial, sans-serif; */
     margin-top: 1em;
+    margin: ;
 }
 .zui-table thead th {
     background-color: #FFF;
@@ -150,4 +151,5 @@ body .pdfView {
 .zui-table tbody td {
     border: solid 1px #DDEEEE;
     padding: 10px;
+    text-align: center;
 }
