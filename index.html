@@ -11,7 +11,7 @@
               type ="text/css"
               media ="screen">
     </head>
-    <body>
+    <body class="pdfView" onload="resize()">
         <!-- ######################     Main Navigation   ########################## -->
         <script>
             function myFunction() {
@@ -32,15 +32,28 @@
         </nav>
         <!-- ######################     End Main Navigation   ########################## -->
         
-        <div class="pdfEntry">
-            <h2>PDF Title</h2>
-            <div class="pdf">
-                <iframe src="https://drive.google.com/file/d/1g8SKROpc-bpnJnrLXk-tfp7xTWR0KP3T/preview" frameborder="0" height="100%" width="100%" allow="autoplay" scrolling = "no"></iframe>
-            </div>
-        </div>
-        
+        <!-- ######################     Size PDF Viewer   ########################## -->
 
-    
+        <iframe id="frame" src="https://drive.google.com/file/d/1g8SKROpc-bpnJnrLXk-tfp7xTWR0KP3T/preview" frameborder="0" allow="autoplay"></iframe>
+
+        <script>
+            function resize() {
+                var x = document.getElementById("myTopNav");
+                var y = document.getElementById("pdfTitle");
+                var frame = document.getElementById("frame");
+                const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+                for (var lx=0, ly=0;
+                    frame != null;
+                    lx += frame.offsetLeft, ly += frame.offsetTop, frame = frame.offsetParent);
+
+                var frame = document.getElementById("frame");
+                frame.height = vh - x.offsetHeight;
+            }
+            window.onresize = resize;
+        </script>
+
+        <!-- ######################     End Size PDF Viewer  ########################## -->
+
     </body>
 </html>
 
