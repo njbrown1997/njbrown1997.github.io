@@ -56,26 +56,15 @@ nav .active {
     background-color: transparent;
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
         float: right;
         display: block;
     }
-
-    .youtube iframe, .pdf iframe{
-        position: absolute;
-        width:100%;
-        height: 100%; 
-    }
-    .youtube, .pdf{
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-    }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 600px) {
     .topnav.responsive {
         position: sticky;
         top: 0;
@@ -90,12 +79,6 @@ nav .active {
         display: block;
         text-align: left;
     }
-}
-
-.gameEntry, .projEntry{
-    padding-bottom: 10px;
-    border-bottom-style: dotted;
-    border-width: medium;
 }
 
 body .pdfView {
@@ -114,22 +97,43 @@ body .pdfView {
 }
 
 /*Projects Page*/
+.projEntry, div.youtube{
+    text-align: center;
+}
 .youtube iframe{
     border: thin solid black;
     border-radius: 8px;
+    margin: 0 auto;
 }
 
+div.bx-wrapper{
+    border: 5px solid #000;
+    background: #000;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    max-width: 900px !important;
+    margin: 0 auto;
+}
+
+div.bx-pager-item a.active {
+  background: #fff !important;
+}
 /*Mobile*/
-@media screen and (max-width: 560px){
+@media screen and (max-width: 500px){
     p{
         font-size:12px;
-    }
-    .gameEntry, .projEntry{
-        padding-bottom: 2%;
     }
     h2{
         font-size: large;
     }
+    div.bx-wrapper{
+        max-width: 100% !important;
+    }
+    .youtube iframe{
+        height: auto;
+        width: auto;
+    }
+    
 }
 
 .zui-table {
@@ -138,7 +142,6 @@ body .pdfView {
     border-spacing: 0;
     /*! font: normal 13px Arial, sans-serif; */
     margin-top: 1em;
-    margin: ;
 }
 .zui-table thead th {
     background-color: #FFF;
