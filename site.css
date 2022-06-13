@@ -11,20 +11,29 @@ a{
     text-decoration: underline;
     font-weight: bold;
 }
-nav{
+nav.topnav{
     z-index: 1000;
     border-radius:8px;
     position: -webkit-sticky; /* Safari */
     position:sticky;
     opacity: .97;
     top: 0;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
-.topnav {
+nav {
     overflow: hidden;
     background-color: #333;
 }
 
-.topnav a {
+nav a {
     font-weight: bold;
     float: left;
     display: block;
@@ -35,7 +44,7 @@ nav{
     font-size: 17px;
 }
 
-.topnav a:hover {
+nav a:hover {
     background-color: #ddd;
     color: black;
 }
@@ -79,6 +88,10 @@ nav .active {
     .topnav.responsive {
         position: sticky;
         top: 0;
+        -webkit-box-orient:vertical;
+        -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+        flex-direction:column;
     }
     .topnav.responsive .icon {
         position: absolute;
@@ -94,7 +107,7 @@ nav .active {
 
 .gameEntry, .projEntry{
     padding-bottom: 10px;
-    border-bottom-style: dotted;
+    border-bottom-style: solid;
     border-width: medium;
 }
 
@@ -118,6 +131,16 @@ body .pdfView {
     border: thin solid black;
     border-radius: 8px;
 }
+@media screen and (min-width: 561px){
+    .gameEntry, .projEntry{
+        text-align: center;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .youtube iframe{
+        margin:0 auto;
+    }
+}
 
 /*Mobile*/
 @media screen and (max-width: 560px){
@@ -137,8 +160,9 @@ body .pdfView {
     border-collapse: collapse;
     border-spacing: 0;
     /*! font: normal 13px Arial, sans-serif; */
-    margin-top: 1em;
-    margin: ;
+    max-width: 800px;
+    width: 100%;
+    margin: 1em auto 0 auto;
 }
 .zui-table thead th {
     background-color: #FFF;

@@ -24,10 +24,8 @@
             }
         </script>
 
-    <nav class ="topnav" id="myTopNav">
+    <nav class ="pdfnav" id="myPdfNav">
         <a href="index.html">Home</a>
-        <a href="pdf.html" class="active">Resume</a>
-        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
     </nav>
         <!-- ######################     End Main Navigation   ########################## -->
         
@@ -37,7 +35,7 @@
 
         <script>
             function resize() {
-                var x = document.getElementById("myTopNav");
+                var x = document.getElementById("myPdfNav");
                 var y = document.getElementById("pdfTitle");
                 var frame = document.getElementById("frame");
                 const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
